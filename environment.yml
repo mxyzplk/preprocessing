@@ -1,0 +1,8 @@
+name: preprocessing
+dependencies:
+  - python=3.13
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - pyyaml
