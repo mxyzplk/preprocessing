@@ -1,14 +1,33 @@
-duration:
-wage-increase-first-year:
-wage-increase-second-year:
-wage-increase-third-year:
-cost-of-living-adjustment:
-working-hours:
-pension:
-standby-pay:
-shift-differential:
-statutory-holidays:
-vacation:
-contribution-to-dental-plan:
-contribution-to-health-plan:
-class:
+substitutions:
+  duration:
+     - ["?"]
+     - [0]
+  wage-increase-first-year:
+     - ["?"]
+     - [0]
+  wage-increase-second-year:
+     - ["?"]
+     - [0]
+  wage-increase-third-year:
+     - ["?"]
+     - [0]
+  cost-of-living-adjustment:
+     - ["?", "none", "nnone", "None", "tcf", "tc"]
+     - [0  ,      0,       0,      0,     1,    1]
+  working-hours:
+     - ["?"]
+     - [0]
+  pension:
+  standby-pay:
+     - ["?"]
+     - [0]
+  shift-differential:
+     - ["?"]
+     - [0]
+  statutory-holidays:
+     - ["?"]
+     - [0]
+  vacation:
+  contribution-to-dental-plan:
+  contribution-to-health-plan:
+  class:
