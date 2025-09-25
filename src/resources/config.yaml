@@ -1,3 +1,18 @@
 data:
    - [lab2-labor-part1.csv]
    - [lab2-labor-part2.csv]
+labels:
+   - [duration]
+   - [wage-increase-first-year]
+   - [wage-increase-second-year]
+   - [wage-increase-third-year]
+   - [cost-of-living-adjustment]
+   - [working-hours]
+   - [pension]   
+   - [standby-pay]
+   - [shift-differential]
+   - [education-allowance]
+   - [statutory-holidays]         
+   - [contribution-to-health-plan]
+   - [contribution-to-dental-plan]
+   - [class]

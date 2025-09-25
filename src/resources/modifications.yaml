@@ -14,10 +14,9 @@ substitutions:
   cost-of-living-adjustment:
      - ["?", "none", "nnone", "None", "tcf", "tc"]
      - [0  ,      0,       0,      0,     1,    1]
-  working-hours:
-     - ["?"]
-     - [0]
   pension:
+     - ["?", "none", "nnone", "None", "empl_contr", "ret_allw"]
+     - [0  ,      0,       0,      0,     1,    1]  
   standby-pay:
      - ["?"]
      - [0]
@@ -27,7 +26,21 @@ substitutions:
   statutory-holidays:
      - ["?"]
      - [0]
-  vacation:
   contribution-to-dental-plan:
+     - ["?", "none", "half", "full"]
+     - [0  ,      0,   0.5,    1.0]
   contribution-to-health-plan:
-  class:
+     - ["?", "none", "half", "full"]
+     - [0  ,      0,   0.5,    1.0]  
+calculations:
+  working-hours:
+     - ["?"]
+     - [mode]
+creation:
+   total-wage:
+     function: sum_columns
+     columns:
+        - [wage-increase-first-year]
+        - [wage-increase-second-year]
+        - [wage-increase-third-year]
+
