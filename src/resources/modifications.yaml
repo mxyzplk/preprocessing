@@ -32,15 +32,23 @@ substitutions:
   contribution-to-health-plan:
      - ["?", "none", "half", "full"]
      - [0  ,      0,   0.5,    1.0]  
+  longterm-disability-assistance:
+     - ["?", "none", "missing_value", "yes"]
+     - [0  ,      0,       0,         1]    
 calculations:
   working-hours:
      - ["?"]
-     - [mode]
-creation:
+     - ["mode"]
+creations:
    total-wage:
-     function: sum_columns
+     function: "sum_columns"
      columns:
-        - [wage-increase-first-year]
-        - [wage-increase-second-year]
-        - [wage-increase-third-year]
+        - "wage-increase-first-year"
+        - "wage-increase-second-year"
+        - "wage-increase-third-year"
+   total-extra-payment:
+     function: "sum_columns"
+     columns:
+        - "shift-differential"
+        - "standby-pay"
 
