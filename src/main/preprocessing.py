@@ -91,3 +91,6 @@ class Data:
             col_name,
             regexp_replace(col(col_name), r"^[\"'“”‘’]|[\"'“”‘’]$", "")
         )   
+
+        self.data = self.data.withColumn(col_name, regexp_replace(col(col_name), r"\s+", ""))
+        
