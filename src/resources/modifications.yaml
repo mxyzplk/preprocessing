@@ -1,44 +1,72 @@
 substitutions:
+  working-hours:
+      parameters:
+       - ["?"]
+       - [null]
+      dtype: "float"  
   duration:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       - [0]
+      dtype: "float"  
   wage-increase-first-year:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       - [0]
+      dtype: "float"        
   wage-increase-second-year:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       - [0]
+      dtype: "float"       
   wage-increase-third-year:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       - [0]
+      dtype: "float" 
   cost-of-living-adjustment:
-     - ["?", "none", "nnone", "None", "tcf", "tc"]
-     - [0  ,      0,       0,      0,     1,    1]
+      parameters:
+       - ["?", "none", "nnone", "None", "tcf", "tc"]
+       - [0  ,      0,       0,      0,     1,    1]
+      dtype: "float" 
   pension:
-     - ["?", "none", "nnone", "None", "empl_contr", "ret_allw"]
-     - [0  ,      0,       0,      0,     1,    1]  
+      parameters:
+       - ["?", "none", "nnone", "None", "empl_contr", "ret_allw"]
+       - [0  ,      0,       0,      0,     1,    1] 
+      dtype: "int"
   standby-pay:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       -  [0]
+      dtype: "float" 
   shift-differential:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       - [0]
+      dtype: "float" 
   statutory-holidays:
-     - ["?"]
-     - [0]
+      parameters:
+       - ["?"]
+       - [0]
+      dtype: "float" 
   contribution-to-dental-plan:
-     - ["?", "none", "half", "full"]
-     - [0  ,      0,   0.5,    1.0]
+      parameters:
+       - ["?", "none", "half", "full"]
+       - [0  ,      0,   0.5,    1.0]
+      dtype: "float" 
   contribution-to-health-plan:
-     - ["?", "none", "half", "full"]
-     - [0  ,      0,   0.5,    1.0]  
+      parameters:
+       - ["?", "none", "half", "full"]
+       - [0  ,      0,   0.5,    1.0]
+      dtype: "float"   
   longterm-disability-assistance:
-     - ["?", "none", "missing_value", "yes"]
-     - [0  ,      0,       0,         1]    
+      parameters:
+       - ["?", "none", "missing_value", "yes"]
+       - [0  ,      0,       0,         1]
+      dtype: "int"     
 calculations:
   working-hours:
-     - ["?"]
-     - ["mode"]
+     method: "mode"
 creations:
    total-wage:
      function: "sum_columns"

@@ -21,10 +21,10 @@ class Config:
 
         f.close()
 
-        filepath = os.path.join(resources_dir,  'transformations.yaml')
+        filepath = os.path.join(resources_dir,  'modifications.yaml')
 
         with open(filepath, "r") as f:
             
-            self.transformations = yaml.safe_load(f)
+            self.modifications = yaml.safe_load(f)
 
         f.close()        

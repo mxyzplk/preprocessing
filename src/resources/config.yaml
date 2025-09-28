@@ -1,6 +1,8 @@
 data:
-   - "lab2-labor-part1.csv"
-   - "lab2-labor-part2.csv"
+   - file: "lab2-labor-part1.csv"
+     output_folder: "dataframe1"
+   - file: "lab2-labor-part2.csv"
+     output_folder: "dataframe2"
 labels:
    - "duration"
    - "wage-increase-first-year"
@@ -11,7 +13,6 @@ labels:
    - "pension"   
    - "standby-pay"
    - "shift-differential"
-   - "education-allowance"
    - "statutory-holidays"         
    - "contribution-to-health-plan"
    - "contribution-to-dental-plan"
@@ -20,3 +21,5 @@ labels:
 substitutions: true
 calculations: true
 creations: true
+concatenate_lines: true
+print_results: true
