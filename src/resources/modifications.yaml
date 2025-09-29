@@ -1,68 +1,68 @@
 substitutions:
   working-hours:
       parameters:
-       - ["?"]
-       - [null]
+       - ["?", ""]
+       - [null, null]
       dtype: "float"  
   duration:
       parameters:
-       - ["?"]
-       - [0]
+       - ["?",  ""]
+       - [0,  0]
       dtype: "float"  
   wage-increase-first-year:
       parameters:
-       - ["?"]
-       - [0]
+       - ["?", ""]
+       - [0,  0]
       dtype: "float"        
   wage-increase-second-year:
       parameters:
-       - ["?"]
-       - [0]
+       - ["?", ""]
+       - [0, 0]
       dtype: "float"       
   wage-increase-third-year:
       parameters:
-       - ["?"]
-       - [0]
+       - ["?", ""]
+       - [0, 0]
       dtype: "float" 
   cost-of-living-adjustment:
       parameters:
-       - ["?", "none", "nnone", "None", "tcf", "tc"]
-       - [0  ,      0,       0,      0,     1,    1]
+       - ["?", "none", "nnone", "None", "tcf", "tc", ""]
+       - [0  ,      0,       0,      0,     1,    1,  0]
       dtype: "float" 
   pension:
       parameters:
-       - ["?", "none", "nnone", "None", "empl_contr", "ret_allw"]
-       - [0  ,      0,       0,      0,     1,    1] 
+       - ["?", "none", "nnone", "None", "empl_contr", "ret_allw", ""]
+       - [0  ,      0,       0,      0,     1,    1,  0] 
       dtype: "int"
   standby-pay:
       parameters:
-       - ["?"]
-       -  [0]
+       - ["?",  ""]
+       -  [0,  0]
       dtype: "float" 
   shift-differential:
       parameters:
-       - ["?"]
-       - [0]
+       - ["?",  ""]
+       - [0,  0]
       dtype: "float" 
   statutory-holidays:
       parameters:
-       - ["?"]
-       - [0]
+       - ["?", ""]
+       - [0,  0]
       dtype: "float" 
   contribution-to-dental-plan:
       parameters:
-       - ["?", "none", "half", "full"]
-       - [0  ,      0,   0.5,    1.0]
+       - ["?", "none", "half", "full", ""]
+       - [0  ,      0,   0.5,    1.0,  0]
       dtype: "float" 
   contribution-to-health-plan:
       parameters:
-       - ["?", "none", "half", "full"]
-       - [0  ,      0,   0.5,    1.0]
+       - ["?", "none", "half", "full", ""]
+       - [0  ,      0,   0.5,    1.0,  0]
       dtype: "float"   
   longterm-disability-assistance:
       parameters:
-       - ["?", "none", "missing_value", "yes"]
-       - [0  ,      0,       0,         1]
+       - ["?", "none", "missing_value", "yes",  ""]
+       - [0  ,      0,       0,         1,  0]
       dtype: "int"     
 calculations:
   working-hours:
